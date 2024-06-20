@@ -4,45 +4,50 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  date-fns:
+    specifier: ^3.6.0
+    version: 3.6.0
+
 devDependencies:
   '@headlessui/react':
-    specifier: ^1.4.2
+    specifier: ^1.7.19
     version: 1.7.19(react-dom@18.3.1)(react@18.3.1)
   '@inertiajs/react':
-    specifier: ^1.0.0
-    version: 1.1.0(react@18.3.1)
+    specifier: ^1.2.0
+    version: 1.2.0(react@18.3.1)
   '@tailwindcss/forms':
-    specifier: ^0.5.3
+    specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.4.4)
   '@vitejs/plugin-react':
-    specifier: ^4.2.0
+    specifier: ^4.3.1
     version: 4.3.1(vite@5.2.13)
   autoprefixer:
-    specifier: ^10.4.12
+    specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
   axios:
-    specifier: ^1.6.4
+    specifier: ^1.7.2
     version: 1.7.2
   daisyui:
     specifier: ^4.12.2
     version: 4.12.2(postcss@8.4.38)
   laravel-vite-plugin:
-    specifier: ^1.0
+    specifier: ^1.0.4
     version: 1.0.4(vite@5.2.13)
   postcss:
-    specifier: ^8.4.31
+    specifier: ^8.4.38
     version: 8.4.38
   react:
-    specifier: ^18.2.0
+    specifier: ^18.3.1
     version: 18.3.1
   react-dom:
-    specifier: ^18.2.0
+    specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
   tailwindcss:
-    specifier: ^3.2.1
+    specifier: ^3.4.4
     version: 3.4.4
   vite:
-    specifier: ^5.0
+    specifier: ^5.2.13
     version: 5.2.13
 
 packages:
@@ -504,8 +509,8 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: true
 
-  /@inertiajs/core@1.1.0:
-    resolution: {integrity: sha512-BTf7LWaJQY9LTZ2P1Z6Y+zmR9X2ndWBxD/dOqWw6nMMjfYulSy6eyEw7iEHSKmu5aVdEO+7yX6pUbRGX5Bog6g==}
+  /@inertiajs/core@1.2.0:
+    resolution: {integrity: sha512-6U0gqCPbGGGMcLoDm+ckKipc5gptZMmfVFfPGdO7vlO7yipWf1RD+TKkcZGJklFvfgFMKwK2VPw8GAv1OctuQA==}
     dependencies:
       axios: 1.7.2
       deepmerge: 4.3.1
@@ -515,12 +520,12 @@ packages:
       - debug
     dev: true
 
-  /@inertiajs/react@1.1.0(react@18.3.1):
-    resolution: {integrity: sha512-fhypJn9KO0DHAdWZeh9qskL5p8h4/msTkqJ+4osXuVwSjwU+rZzC4P27zFLaM5fs+yPMw35491b8PuI/RooHTw==}
+  /@inertiajs/react@1.2.0(react@18.3.1):
+    resolution: {integrity: sha512-Q3wTaQJdoUbUB8YIGeQ0y2Tf/k8dNtz9Nu2dYr1pbYUBv++6d45iC/CFB/lIpqVvvUw8XuIai2bdsUcRSIbPCQ==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@inertiajs/core': 1.1.0
+      '@inertiajs/core': 1.2.0
       lodash.isequal: 4.5.0
       react: 18.3.1
     transitivePeerDependencies:
@@ -855,7 +860,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001632
+      caniuse-lite: 1.0.30001633
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -900,8 +905,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001632
-      electron-to-chromium: 1.4.798
+      caniuse-lite: 1.0.30001633
+      electron-to-chromium: 1.4.802
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
     dev: true
@@ -922,8 +927,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite@1.0.30001632:
-    resolution: {integrity: sha512-udx3o7yHJfUxMLkGohMlVHCvFvWmirKh9JAH/d7WOLPetlH+LTL5cocMZ0t7oZx/mdlOWXti97xLZWc8uURRHg==}
+  /caniuse-lite@1.0.30001633:
+    resolution: {integrity: sha512-6sT0yf/z5jqf8tISAgpJDrmwOpLsrpnyCdD/lOZKvKkkJK4Dn0X5i7KF7THEZhOq+30bmhwBlNEaqPUiHiKtZg==}
     dev: true
 
   /chalk@2.4.2:
@@ -1030,6 +1035,10 @@ packages:
       - postcss
     dev: true
 
+  /date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
+    dev: false
+
   /debug@4.3.5:
     resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
     engines: {node: '>=6.0'}
@@ -1073,8 +1082,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.798:
-    resolution: {integrity: sha512-by9J2CiM9KPGj9qfp5U4FcPSbXJG7FNzqnYaY4WLzX+v2PHieVGmnsA4dxfpGE3QEC7JofpPZmn7Vn1B9NR2+Q==}
+  /electron-to-chromium@1.4.802:
+    resolution: {integrity: sha512-TnTMUATbgNdPXVSHsxvNVSG0uEd6cSZsANjm8c9HbvflZVVn1yTRcmVXYT1Ma95/ssB/Dcd30AHweH2TE+dNpA==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1176,8 +1185,8 @@ packages:
         optional: true
     dev: true
 
-  /foreground-child@3.1.1:
-    resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
+  /foreground-child@3.2.0:
+    resolution: {integrity: sha512-CrWQNaEl1/6WeZoarcM9LHupTo3RpZO2Pdk1vktwzPiQTsJnAKJmm3TACKeG5UZbWDfaH2AbvYxzP96y0MT7fA==}
     engines: {node: '>=14'}
     dependencies:
       cross-spawn: 7.0.3
@@ -1244,7 +1253,7 @@ packages:
     engines: {node: '>=16 || 14 >=14.18'}
     hasBin: true
     dependencies:
-      foreground-child: 3.1.1
+      foreground-child: 3.2.0
       jackspeak: 3.4.0
       minimatch: 9.0.4
       minipass: 7.1.2

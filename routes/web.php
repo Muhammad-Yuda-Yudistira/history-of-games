@@ -15,7 +15,8 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/', [PlatformController::class, 'show'])->name('platform.get');
+Route::get('/', [PlatformController::class, 'show'])->name('platform.show');
+Route::get('/Platform', [PlatformController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -1,23 +1,20 @@
-export default function Card({ index }) {
+import { format } from "date-fns";
+
+export default function Card({ platform }) {
+    let date = new Date(platform.release);
+    date = format(date, "MMMM dd, yyy");
     return (
-        <div
-            key={index}
-            className="card card-side bg-base-100 shadow-xl w-60 h-64 relative overflow-hidden"
-        >
-            <figure className="w-full">
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-                    alt="Movie"
-                    className="hover:absolute hover:w-full hover:right-0"
-                />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">New movie is released!</h2>
-                <p className="text-lime-300">
-                    Click the button to watch on Jetflix app.
+        <div className="card glass w-32 bg-base-100 shadow-xl rounded-sm rounded-b-2xl">
+            <div className="card-body px-3 py-3 pt-2 text-stone-300">
+                <h2 className="card-title text-lg">{platform.name}</h2>
+                <p className="capitalize py-0 my-0">
+                    generation: {platform.generation}
                 </p>
-                <div className="card-actions justify-end"></div>
+                <p className="capitalize py-0 my-0">{date}</p>
             </div>
+            <figure className="max-h-52 w-full">
+                <img className="" src={platform.image} alt="Console" />
+            </figure>
         </div>
     );
 }
