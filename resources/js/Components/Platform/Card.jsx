@@ -12,7 +12,7 @@ export default function Card({ platform }) {
                 </p>
                 <p className="capitalize py-0 my-0">{date}</p>
             </div>
-            <figure className="max-h-52 w-full">
+            <figure className="max-h-52 w-full border-t-4 border-red-600 border-double">
                 <img className="" src={platform.image} alt="Console" />
             </figure>
         </div>

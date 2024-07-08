@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PlatformController;
+use App\Http\Controllers\DonationController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,8 +16,11 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/', [PlatformController::class, 'show'])->name('platform.show');
-Route::get('/Platform', [PlatformController::class, 'show']);
+Route::get('/', [PlatformController::class, 'show']);
+Route::get('/Platform', [PlatformController::class, 'show'])->name('platform.show');
+
+Route::get('/donation', [DonationController::class, 'index'])->name('donation.index');
+Route::post('/donation', [DonationController::class, 'store'])->name('donation.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

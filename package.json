@@ -9,6 +9,7 @@
         "@headlessui/react": "^1.7.19",
         "@inertiajs/react": "^1.2.0",
         "@tailwindcss/forms": "^0.5.7",
+        "@vercel/static-build": "^2.5.11",
         "@vitejs/plugin-react": "^4.3.1",
         "autoprefixer": "^10.4.19",
         "axios": "^1.7.2",

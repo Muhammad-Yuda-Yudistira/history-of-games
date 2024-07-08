@@ -2,21 +2,26 @@ import { Head } from "@inertiajs/react";
 import React, { useState } from "react";
 import Card from "@/Components/Platform/Card";
 import Pagination from "@/Components/Platform/Pagination";
+import Navbar from "@/Components/Platform/Navbar";
+import Footer from "@/Components/Platform/Footer";
 
 export default function Index({ titlePage, platforms, geneActive }) {
     // const platforms = 10; //data untuk template tanpa database
     const geneTotal = 9;
 
     return (
-        <>
+        <div className="">
             <Head title={titlePage} />
+            <div id="navbar" className="w-full">
+                <Navbar />
+            </div>
             <main
                 id="content"
-                className="container-fluid m-auto w-screen min-h-screen box-border bg-lime-300 pb-10 px-10 bg-[url('./theme/background/bg-1.jpg')] bg-contain bg-center"
+                className="container-fluid m-auto pt-10 w-screen min-h-screen box-border bg-stone-300 py-10 pt-20 px-10 bg-[url('./theme/background/bg-1.jpg')] bg-contain bg-center"
             >
                 <div
                     id="content-title"
-                    className="text-center w-full bg-base-100 pb-6 rounded-b-full glass text-stone-200"
+                    className="text-center w-full bg-base-100 pb-6 p-3 rounded-b-full glass text-stone-200"
                 >
                     <h1 className="text-2xl">
                         Console Generation {geneActive}
@@ -38,10 +43,16 @@ export default function Index({ titlePage, platforms, geneActive }) {
                         })
                     }
                 </div>
-                <div id="content-pagination" className="flex justify-center">
+                <div
+                    id="content-pagination"
+                    className="flex justify-center mt-20"
+                >
                     <Pagination number={geneTotal} active={geneActive} />
                 </div>
             </main>
-        </>
+            <div id="footer" className="">
+                <Footer />
+            </div>
+        </div>
     );
 }
