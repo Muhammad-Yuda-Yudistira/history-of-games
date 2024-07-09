@@ -27,7 +27,7 @@ export default function Footer() {
                 <h6 className="footer-title text-red-600">Features</h6>
                 <div className="grid grid-flow-col gap-4">
                     <ul>
-                        <Link href={route("donation.index")}>
+                        <Link href="./donation">
                             <h6 className="text-neutral-500 hover:text-indigo-600">
                                 Donation
                             </h6>
