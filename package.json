@@ -23,6 +23,8 @@
     },
     "dependencies": {
         "date-fns": "^3.6.0",
+        "tilt.js": "^1.2.1",
+        "vanilla-tilt": "^1.8.1",
         "ziggy-js": "^2.2.1"
     }
 }

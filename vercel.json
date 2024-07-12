@@ -41,6 +41,13 @@
 
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+
+        "DB_CONNECTION": "pgsql",
+        "DB_HOST": "satao.db.elephantsql.com",
+        "DB_PORT": "5432",
+        "DB_DATABASE": "ksuybcmt",
+        "DB_USERNAME": "ksuybcmt",
+        "DB_PASSWORD": "oI2011qI6PFWEDZLKmCLWeyINZduoUEn"
     }
 }
