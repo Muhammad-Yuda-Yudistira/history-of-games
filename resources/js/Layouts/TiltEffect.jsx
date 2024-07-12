@@ -8,11 +8,11 @@ const TiltComponent = (props) => {
     useEffect(() => {
         const tiltNode = tiltRef.current;
         VanillaTilt.init(tiltNode, {
-            max: 30,
+            max: 25,
             perspective: 1000,
             speed: 600,
             glare: true,
-            "max-glare": 0.2,
+            "max-glare": 0.5,
         });
 
         return () => {

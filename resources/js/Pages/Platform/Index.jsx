@@ -6,9 +6,10 @@ import MainLayout from "@/Layouts/MainLayout";
 import TiltComponent from "@/Layouts/TiltEffect";
 
 export default function Index({ titlePage, platforms }) {
-    // const platforms = 10; //data untuk template tanpa database
-    const geneTotal = 9;
-    console.info(platforms);
+    const [shower, getShower] = useState(0);
+    const handleClick = (index) => {
+        return getShower(index);
+    };
 
     return (
         <>
@@ -16,12 +17,16 @@ export default function Index({ titlePage, platforms }) {
             <MainLayout>
                 <div
                     id="content-items"
-                    className="w-2/3 bg-yellow-300 flex flex-wrap content-start justify-center overflow-scroll gap-4 py-4 pb-8"
+                    className="w-2/3 bg-primary-700 flex flex-wrap content-start justify-center overflow-scroll gap-4 py-4 pb-8"
                     style={{ height: "calc(100vh - 4rem)" }}
                 >
-                    {platforms.map((platform) => {
+                    {platforms.map((platform, index) => {
                         return (
-                            <div className="w-32 h-32 bg-white border-4 border-white transition duration-300 hover:border-stone-100 hover:invert hover:border-dashed hover:border-black">
+                            <div
+                                key={index}
+                                className="w-32 h-32 bg-white border-4 border-white transition duration-300 hover:border-stone-100 hover:invert hover:border-dashed hover:border-black"
+                                onClick={() => handleClick(index)}
+                            >
                                 <div
                                     style={{
                                         backgroundImage: `url(${platform.image})`,
@@ -34,30 +39,30 @@ export default function Index({ titlePage, platforms }) {
                 </div>
                 <div
                     id="content-item"
-                    className="w-1/3 bg-white border-l-8 border-dashed border-yellow-300"
+                    className="w-1/3 bg-secondary border-l-8 border-dashed border-primary-700"
                 >
                     <TiltComponent>
                         <div
                             id="item-show"
-                            className="bg-blue-700 h-full mx-4 border-double border-4 border-red-600 pl-4"
+                            className="bg-secondary h-full mx-4 border-double border-4 border-accent-600 pl-4 pt-2 scale-90"
                             style={{ transformStyle: "preserve-3d" }}
                         >
                             <div
-                                className="border-b-2 border-red-300 w-fit"
-                                style={{ transform: "translateZ(30px)" }}
+                                className="border-b-2 border-accent-400 w-fit"
+                                style={{ transform: "translateZ(50px)" }}
                             >
-                                <span className="text-red-500 text-xl">
+                                <span className="text-accent-600 text-xl">
                                     Console Generation:{" "}
                                 </span>
                                 <div className="rating rating-xs pl-2">
-                                    {Array(platforms[20].generation)
+                                    {Array(platforms[shower].generation)
                                         .fill()
                                         .map((_, index) => {
                                             return (
                                                 <input
                                                     type="radio"
                                                     name="rating-1"
-                                                    className="mask mask-star-2 bg-red-400"
+                                                    className="mask mask-star-2 bg-accent-400"
                                                     disabled
                                                 />
                                             );
@@ -65,35 +70,41 @@ export default function Index({ titlePage, platforms }) {
                                 </div>
                             </div>
                             <div
+                                className="w-[80%] h-full"
                                 style={{
-                                    backgroundImage: `url(${platforms[20].image})`,
-                                    transform: "translate3D(0,0,50px)",
+                                    transform: "translate3D(0,0,100px)",
                                 }}
-                                className="w-[80%] h-full bg-contain bg-no-repeat bg-center"
-                            ></div>
+                            >
+                                <div
+                                    style={{
+                                        backgroundImage: `url(${platforms[shower].image})`,
+                                    }}
+                                    className=" h-[90%] w-full bg-contain bg-no-repeat bg-center m-auto scale-75"
+                                ></div>
+                            </div>
                         </div>
                     </TiltComponent>
                     <div id="item-detail" className="bg-stone-300 h-2/5 mx-4">
-                        <ul className="flex flex-col w-full h-full bg-white justify-center items-center py-4 overflow-scroll">
+                        <ul className="flex flex-col w-full h-full bg-white justify-center items-center overflow-scroll">
                             <li>
                                 <div className="chat chat-start">
-                                    <div className="chat-bubble border-4 border-dashed border-white bg-green-300 py-1 text-center text-green-900">
-                                        {platforms[20].name}
+                                    <div className="chat-bubble border-4 border-dashed border-white bg-accent-300 py-1 text-center text-accent-600">
+                                        {platforms[shower].name}
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="chat chat-end">
-                                    <div className="chat-bubble border-4 border-dashed border-white bg-green-600 py-1 text-center text-green-100">
-                                        {platforms[20].company}
+                                    <div className="chat-bubble border-4 border-dashed border-white bg-accent-400 py-1 text-center text-accent-600">
+                                        {platforms[shower].company}
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="chat chat-start">
-                                    <div className="chat-bubble border-4 border-dashed border-white bg-green-300 py-1 text-center text-green-900">
+                                    <div className="chat-bubble border-4 border-dashed border-white bg-accent-300 py-1 text-center text-accent-600">
                                         {new Date(
-                                            platforms[20].release,
+                                            platforms[shower].release,
                                         ).toLocaleDateString("id-ID", {
                                             year: "numeric",
                                             month: "long",
