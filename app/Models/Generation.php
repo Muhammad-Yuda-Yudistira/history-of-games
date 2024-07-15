@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Platform extends Model
+class Generation extends Model
 {
     use HasFactory;
 
-    public function generation()
+    public function platforms() 
     {
-        return $this->belongsTo(Generation::class);
+        return $this->hasMany(platform::class);
     }
 }

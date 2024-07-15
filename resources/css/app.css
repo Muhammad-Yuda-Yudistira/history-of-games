@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .cardItem {
+        @apply w-20 h-20 bg-white border-4 transition duration-300 hover:border-stone-100 hover:invert hover:border-dashed hover:border-black;
+    }
+
+    .cardItemImage {
+        @apply w-full h-full bg-contain bg-center bg-no-repeat saturate-200 hover:scale-125;
+    }
+}

@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('platforms', function (Blueprint $table) {
+        Schema::create('generations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('company');
-            $table->date('release');
-            $table->foreignId('generation_id');
-            $table->string('image');
+            $table->string('title');
+            $table->integer('generation');
+            $table->string('label');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('platforms');
+        Schema::dropIfExists('generations');
     }
 };
