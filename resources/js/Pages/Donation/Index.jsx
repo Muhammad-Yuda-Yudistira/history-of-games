@@ -97,10 +97,11 @@ export default function Index(props) {
                             ></path>
                         </svg>
                         <span>
-                            Untuk donasi silahkan langsung kirim pulsa aja ke
-                            nomor berikut: {nohp}.<br />
+                            Untuk traktir silahkan langsung kirim pulsa aja ke
+                            nomor berikut, termasuk saran & kritik: {nohp}.
+                            <br />
                             <small>
-                                Untuk request fitur lihat list dibawah ini ya!
+                                Request fitur lihat list dibawah ini ya!
                             </small>
                         </span>
                     </div>

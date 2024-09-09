@@ -2,25 +2,16 @@
     "version": 2,
     "framework": "vite",
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" },
-        "api/cors.js": { "runtime": "@vercel/node@3.2.0" }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
         {
             "src": "/theme/(.*)",
-            "dest": "/public/theme/$1"
+            "dest": "/public/theme/"
         },
         {
-            "src": "/content/(.*)",
-            "dest": "/public/content/$1"
-        },
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
-        },
-        {
-            "src": "/api/cors.js",
-            "dest": "/api/cors.js"
+            "src": "/content/Platform/(.*)",
+            "dest": "/public/content/platform/"
         },
         {
             "src": "/(.*)",
@@ -29,8 +20,8 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_URL": "https://history-of-games.vercel.app",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://yourproductionurl.com",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -41,13 +32,6 @@
 
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-
-        "DB_CONNECTION": "pgsql",
-        "DB_HOST": "satao.db.elephantsql.com",
-        "DB_PORT": "5432",
-        "DB_DATABASE": "ksuybcmt",
-        "DB_USERNAME": "ksuybcmt",
-        "DB_PASSWORD": "oI2011qI6PFWEDZLKmCLWeyINZduoUEn"
+        "SESSION_DRIVER": "cookie"
     }
 }

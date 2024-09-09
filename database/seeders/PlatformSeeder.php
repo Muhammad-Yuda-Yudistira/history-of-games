@@ -54,13 +54,13 @@ class PlatformSeeder extends Seeder
             'image' => './content/platform/color_tv_game.jpeg'
         ]);
 
-        Platform::create([
-            'name' => 'Merlin',
-            'company' => 'Parker Brothers',
-            'release' => '1978-01-01',
-            'generation_id' => 1,
-            'image' => './content/platform/merlin.jpeg'
-        ]);
+        // Platform::create([
+        //     'name' => 'Merlin',
+        //     'company' => 'Parker Brothers',
+        //     'release' => '1978-01-01',
+        //     'generation_id' => 1,
+        //     'image' => './content/platform/merlin.jpeg'
+        // ]);
 
         // CONSOLE GENERATION 2
         Platform::create([
