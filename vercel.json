@@ -6,12 +6,16 @@
     },
     "routes": [
         {
-            "src": "/theme/(.*)",
-            "dest": "/public/theme/"
+            "src": "/favicon.ico",
+            "dest": "public/"
         },
         {
-            "src": "/content/Platform/(.*)",
-            "dest": "/public/content/platform/"
+            "src": "/content/platform(.*)",
+            "dest": "public/content/platform/"
+        },
+        {
+            "src": "/theme/(.*)",
+            "dest": "public/theme/"
         },
         {
             "src": "/(.*)",
@@ -21,7 +25,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://history-of-games.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",

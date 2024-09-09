@@ -2,7 +2,7 @@ export default function Shower({ platforms, shower }) {
     return (
         <div
             id="item-show"
-            className="bg-secondary bg-contain bg-center h-full mx-4 border-double border-4 border-accent-600 pl-4 pt-2 scale-90"
+            className="bg-secondary bg-contain bg-center h-full mx-4 border-double border-4 border-blue-600 pl-4 pt-2 scale-90"
             style={{ transformStyle: "preserve-3d" }}
         >
             <div
